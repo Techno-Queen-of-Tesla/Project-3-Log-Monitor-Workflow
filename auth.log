@@ -1,0 +1,201 @@
+
+Jan 15 02:28:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 16:46:43 linux-server systemd-logind[656]: New seat seat0.
+Jan 15 16:46:43 linux-server systemd-logind[656]: Watching system buttons on /dev/input/event0 (Power Button)
+Jan 15 16:46:43 linux-server systemd-logind[656]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Jan 15 16:46:43 linux-server systemd-logind[656]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+Jan 15 16:46:46 linux-server gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session opened for user gdm(uid=128) by (uid=0)
+Jan 15 16:46:46 linux-server systemd-logind[656]: New session c1 of user gdm.
+Jan 15 16:46:46 linux-server systemd: pam_unix(systemd-user:session): session opened for user gdm(uid=128) by (uid=0)
+Jan 15 16:46:50 linux-server polkitd(authority=local): Registered Authentication Agent for unix-session:c1 (system bus name :1.49 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Jan 15 16:46:55 linux-server gdm-password]: gkr-pam: unable to locate daemon control file
+Jan 15 16:46:55 linux-server gdm-password]: gkr-pam: stashed password to try later in open session
+Jan 15 16:46:55 linux-server gdm-password]: pam_unix(gdm-password:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:46:55 linux-server systemd-logind[656]: New session 2 of user student.
+Jan 15 16:46:56 linux-server systemd: pam_unix(systemd-user:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:46:56 linux-server gdm-password]: gkr-pam: gnome-keyring-daemon started properly and unlocked keyring
+Jan 15 16:46:56 linux-server gnome-keyring-daemon[1793]: The Secret Service was already initialized
+Jan 15 16:46:56 linux-server gnome-keyring-daemon[1793]: The PKCS#11 component was already initialized
+Jan 15 16:46:56 linux-server gnome-keyring-daemon[1793]: The SSH agent was already initialized
+Jan 15 16:46:57 linux-server polkitd(authority=local): Registered Authentication Agent for unix-session:2 (system bus name :1.86 [/usr/bin/gnome-shell], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Jan 15 16:47:00 linux-server gdm-launch-environment]: pam_unix(gdm-launch-environment:session): session closed for user gdm
+Jan 15 16:47:00 linux-server systemd-logind[656]: Session c1 logged out. Waiting for processes to exit.
+Jan 15 16:47:00 linux-server polkitd(authority=local): Unregistered Authentication Agent for unix-session:c1 (system bus name :1.49, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Jan 15 16:47:00 linux-server systemd-logind[656]: Removed session c1.
+Jan 15 16:47:01 linux-server CRON[2544]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:47:01 linux-server CRON[2544]: pam_unix(cron:session): session closed for user student
+Jan 15 16:47:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 16:47:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 16:47:03 linux-server PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Jan 15 16:47:03 linux-server PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Jan 15 16:47:13 linux-server dbus-daemon[624]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Jan 15 16:47:14 linux-server PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Jan 15 16:47:14 linux-server PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Jan 15 16:47:16 linux-server PackageKit: uid 1000 is trying to obtain org.freedesktop.packagekit.system-sources-refresh auth (only_trusted:0)
+Jan 15 16:47:16 linux-server PackageKit: uid 1000 obtained auth for org.freedesktop.packagekit.system-sources-refresh
+Jan 15 16:48:01 linux-server CRON[3912]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:48:01 linux-server CRON[3912]: pam_unix(cron:session): session closed for user student
+Jan 15 16:48:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 16:48:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 16:48:03 linux-server pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Jan 15 16:48:03 linux-server pkexec[3980]: student: Executing command [USER=root] [TTY=unknown] [CWD=/home/student] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Jan 15 16:48:31 linux-server gnome-keyring-daemon[1793]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+Jan 15 16:48:52 linux-server dbus-daemon[624]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
+Jan 15 16:49:01 linux-server CRON[4495]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:49:01 linux-server CRON[4495]: pam_unix(cron:session): session closed for user student
+Jan 15 16:49:02 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 16:49:02 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 16:50:02 linux-server CRON[4501]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:50:02 linux-server CRON[4501]: pam_unix(cron:session): session closed for user student
+Jan 15 16:50:02 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 16:50:02 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 16:51:01 linux-server CRON[4507]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:51:01 linux-server CRON[4507]: pam_unix(cron:session): session closed for user student
+Jan 15 16:51:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 16:51:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 16:52:01 linux-server CRON[4549]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:52:01 linux-server CRON[4549]: pam_unix(cron:session): session closed for user student
+Jan 15 16:52:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 16:52:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 16:53:01 linux-server CRON[4557]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:53:01 linux-server CRON[4557]: pam_unix(cron:session): session closed for user student
+Jan 15 16:53:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 16:53:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 16:54:01 linux-server CRON[4560]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:54:01 linux-server CRON[4560]: pam_unix(cron:session): session closed for user student
+Jan 15 16:54:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 16:54:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 16:55:01 linux-server CRON[4563]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:55:01 linux-server CRON[4563]: pam_unix(cron:session): session closed for user student
+Jan 15 16:55:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 16:55:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 16:56:01 linux-server CRON[4566]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:56:01 linux-server CRON[4566]: pam_unix(cron:session): session closed for user student
+Jan 15 16:56:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 16:56:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 16:57:01 linux-server CRON[4572]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:57:01 linux-server CRON[4572]: pam_unix(cron:session): session closed for user student
+Jan 15 16:57:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 16:57:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 16:58:01 linux-server CRON[4576]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:58:01 linux-server CRON[4576]: pam_unix(cron:session): session closed for user student
+Jan 15 16:58:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 16:58:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 16:59:01 linux-server CRON[4987]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 16:59:01 linux-server CRON[4987]: pam_unix(cron:session): session closed for user student
+Jan 15 16:59:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 16:59:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:00:03 linux-server pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+Jan 15 17:00:03 linux-server pkexec[5179]: student: Executing command [USER=root] [TTY=unknown] [CWD=/home/student] [COMMAND=/usr/lib/update-notifier/package-system-locked]
+Jan 15 17:01:01 linux-server CRON[5188]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:01:01 linux-server CRON[5188]: pam_unix(cron:session): session closed for user student
+Jan 15 17:01:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:01:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:02:01 linux-server CRON[5195]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:02:01 linux-server CRON[5195]: pam_unix(cron:session): session closed for user student
+Jan 15 17:02:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:02:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:03:01 linux-server CRON[5215]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:03:01 linux-server CRON[5215]: pam_unix(cron:session): session closed for user student
+Jan 15 17:03:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:03:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:04:01 linux-server CRON[5323]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:04:01 linux-server CRON[5323]: pam_unix(cron:session): session closed for user student
+Jan 15 17:04:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:04:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:05:01 linux-server CRON[5351]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:05:01 linux-server CRON[5351]: pam_unix(cron:session): session closed for user student
+Jan 15 17:05:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:05:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:06:01 linux-server CRON[5354]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:06:01 linux-server CRON[5354]: pam_unix(cron:session): session closed for user student
+Jan 15 17:06:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:06:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:07:01 linux-server CRON[5361]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:07:01 linux-server CRON[5361]: pam_unix(cron:session): session closed for user student
+Jan 15 17:07:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:07:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:08:01 linux-server CRON[5365]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:08:01 linux-server CRON[5365]: pam_unix(cron:session): session closed for user student
+Jan 15 17:08:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:08:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:09:01 linux-server CRON[5411]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:09:01 linux-server CRON[5411]: pam_unix(cron:session): session closed for user student
+Jan 15 17:09:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:09:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:10:01 linux-server CRON[5477]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:10:01 linux-server CRON[5477]: pam_unix(cron:session): session closed for user student
+Jan 15 17:10:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:10:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:11:01 linux-server CRON[5480]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:11:01 linux-server CRON[5480]: pam_unix(cron:session): session closed for user student
+Jan 15 17:11:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:11:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:11:57 linux-server sudo:  student : TTY=pts/1 ; PWD=/home/student ; USER=root ; COMMAND=/usr/bin/nano /var/log/auth.log
+Jan 15 17:11:57 linux-server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Jan 15 17:12:01 linux-server CRON[5560]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:12:01 linux-server CRON[5560]: pam_unix(cron:session): session closed for user student
+Jan 15 17:12:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:12:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:12:26 linux-server sudo: pam_unix(sudo:session): session closed for user root
+Jan 15 17:13:01 linux-server CRON[5568]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:13:01 linux-server CRON[5568]: pam_unix(cron:session): session closed for user student
+Jan 15 17:13:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:13:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:14:01 linux-server CRON[5580]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:14:01 linux-server CRON[5580]: pam_unix(cron:session): session closed for user student
+Jan 15 17:14:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:14:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:15:01 linux-server CRON[5627]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:15:01 linux-server CRON[5627]: pam_unix(cron:session): session closed for user student
+Jan 15 17:15:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:15:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:16:01 linux-server CRON[5632]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:16:01 linux-server CRON[5632]: pam_unix(cron:session): session closed for user student
+Jan 15 17:16:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:16:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:17:01 linux-server CRON[5640]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Jan 15 17:17:01 linux-server CRON[5641]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:17:01 linux-server CRON[5641]: pam_unix(cron:session): session closed for user student
+Jan 15 17:17:01 linux-server CRON[5640]: pam_unix(cron:session): session closed for user root
+Jan 15 17:17:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:17:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:18:01 linux-server CRON[5648]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:18:01 linux-server CRON[5648]: pam_unix(cron:session): session closed for user student
+Jan 15 17:18:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:18:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:19:01 linux-server CRON[5653]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:19:01 linux-server CRON[5653]: pam_unix(cron:session): session closed for user student
+Jan 15 17:19:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:19:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:19:23 linux-server sudo:  student : TTY=pts/1 ; PWD=/var/log ; USER=root ; COMMAND=/usr/bin/cat /var/log/auth.log
+Jan 15 17:19:23 linux-server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Jan 15 17:19:23 linux-server sudo: pam_unix(sudo:session): session closed for user root
+Jan 15 17:20:01 linux-server CRON[5733]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:20:01 linux-server CRON[5733]: pam_unix(cron:session): session closed for user student
+Jan 15 17:20:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:20:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:21:01 linux-server CRON[5896]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:21:01 linux-server CRON[5896]: pam_unix(cron:session): session closed for user student
+Jan 15 17:21:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:21:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:21:55 linux-server sudo:  student : TTY=pts/1 ; PWD=/var/log ; USER=root ; COMMAND=/usr/bin/tail cat /var/log/auth.log
+Jan 15 17:21:55 linux-server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Jan 15 17:21:55 linux-server sudo: pam_unix(sudo:session): session closed for user root
+Jan 15 17:22:01 linux-server CRON[5916]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:22:01 linux-server CRON[5916]: pam_unix(cron:session): session closed for user student
+Jan 15 17:22:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:22:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:22:49 linux-server sudo:  student : TTY=pts/1 ; PWD=/var/log ; USER=root ; COMMAND=/usr/bin/tail -n 200 /var/log/auth.log
+Jan 15 17:22:49 linux-server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+Jan 15 17:22:49 linux-server sudo: pam_unix(sudo:session): session closed for user root
+Jan 15 17:23:01 linux-server CRON[6088]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:23:01 linux-server CRON[6088]: pam_unix(cron:session): session closed for user student
+Jan 15 17:23:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:23:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:24:01 linux-server CRON[6190]: pam_unix(cron:session): session opened for user student(uid=1000) by (uid=0)
+Jan 15 17:24:01 linux-server CRON[6190]: pam_unix(cron:session): session closed for user student
+Jan 15 17:24:01 linux-server sudo: pam_unix(sudo:auth): conversation failed
+Jan 15 17:24:01 linux-server sudo: pam_unix(sudo:auth): auth could not identify password for [student]
+Jan 15 17:24:12 linux-server sudo:  student : TTY=pts/1 ; PWD=/var/log ; USER=root ; COMMAND=/usr/bin/tail -n 200 /var/log/auth.log
+Jan 15 17:24:12 linux-server sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
