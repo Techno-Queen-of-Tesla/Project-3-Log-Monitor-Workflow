@@ -1,4 +1,5 @@
 from datetime import datetime
+import yagmail
 
 # defined file paths
 log_file = "access.log"
@@ -28,7 +29,7 @@ def save_last_run_time(timestamp):
 def log_activity(message):
     # log the alert or activity with a timestamp
     with open(monitor_log, "a") as log_file:
-        log_file.write(f"{datetime.now().strftime('%b %d %H:%M:%S')} - {message}\n")
+        log_file.write(f"{datetime.now().strftime("%b %d %H:%M:%S")} - {message}\n")
 
 def web_traffic(last_run_time=None):
     # monitor web traffic and detect unusually high activity
@@ -43,8 +44,8 @@ def web_traffic(last_run_time=None):
         for line in f:
             try:
                 # get timestamp from the log entry (adjusted to log format)
-                timestamp_str = line[:15]
-                log_timestamp = datetime.strptime(timestamp_str, "%b %d %H:%M:%S")
+                timestamp_str = line.split("[")[1].split(" ")[0]  # extract timestamp
+                log_timestamp = datetime.strptime(timestamp_str, "%d/%b/%Y:%H:%M:%S")
                 log_timestamp = log_timestamp.replace(year=new_last_run_time.year)
 
                 # check if the log entry is new since the previous scan
@@ -57,9 +58,25 @@ def web_traffic(last_run_time=None):
     # count the new log input lines since the last scan
     requests = len(relevant_lines)
 
-    #checks if the threshold has been exceeded, and outputs an alert to a log file, if so
-    if requests >= 300:
-        log_activity(f"ALERT: High traffic detected! {requests} new requests since last run.")
+    # email settings
+    EMAIL_ADDRESS = "me@gmail.com" # my email address
+    EMAIL_PASSWORD = "mypassword"  # password for my gmail account
+    ALERT_EMAIL = "turnanewleaf@gmail.com" # client email address
+
+    def send_email_alert(subject, message):
+        try:
+            yag = yagmail.SMTP(EMAIL_ADDRESS, EMAIL_PASSWORD)
+            yag.send(
+                to=ALERT_EMAIL,
+                subject=subject,
+                contents=message
+            )
+
+        #checks if the threshold has been exceeded, and outputs an alert to an email, if so
+            if requests > 300:
+                send_email_alert(f"ALERT: High traffic detected! {requests} new requests since last scan.")
+        except Exception as e:
+                send_email_alert(f"Failed to send email: {e}")
 
     # last_run_time.txt file is updated with the current time
     save_last_run_time(new_last_run_time)
