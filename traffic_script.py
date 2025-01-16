@@ -27,7 +27,7 @@ def save_last_run_time(timestamp):
         last_run_file.write(timestamp.strftime("%b %d %H:%M:%S"))
 
 def log_activity(message):
-    # log the alert or activity with a timestamp
+    # log the alert or activity with a timestamp in monitoring.log
     with open(monitor_log, "a") as log_file:
         log_file.write(f"{datetime.now().strftime("%b %d %H:%M:%S")} - {message}\n")
 
@@ -72,7 +72,7 @@ def web_traffic(last_run_time=None):
                 contents=message
             )
 
-        #checks if the threshold has been exceeded, and outputs an alert to an email, if so
+        # checks if the threshold has been exceeded, and outputs an alert to an email, if so
             if requests > 300:
                 send_email_alert(f"ALERT: High traffic detected! {requests} new requests since last scan.")
         except Exception as e:
