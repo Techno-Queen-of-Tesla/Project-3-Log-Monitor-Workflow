@@ -1,7 +1,7 @@
 from datetime import datetime
 
 # defined file paths
-log_file = "auth.log"
+log_file = "access.log"
 last_run_time = "last_run_time.txt"
 monitor_log = "monitoring.log"
 
