@@ -59,9 +59,9 @@ def web_traffic(last_run_time=None):
     requests = len(relevant_lines)
 
     # email settings
-    EMAIL_ADDRESS = "me@gmail.com" # my email address
-    EMAIL_PASSWORD = "mypassword"  # password for my gmail account
-    ALERT_EMAIL = "turnanewleaf@gmail.com" # client email address
+    EMAIL_ADDRESS = "me@lighthouselabs.com" # my email address
+    EMAIL_PASSWORD = "mypassword"  # password for my email account
+    ALERT_EMAIL = "manager@lighthouselabs.com" # manager's email address
 
     def send_email_alert(subject, message):
         try:
