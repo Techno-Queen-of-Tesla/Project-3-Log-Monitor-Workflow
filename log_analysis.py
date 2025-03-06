@@ -1,12 +1,13 @@
 from datetime import datetime
+import re
 import pytz
 import yagmail
-import re
+
 
     # defined file paths
-log_file = "/workspaces/Project-2-Log-Monitor-Workflow/var/log/auth.log"
-last_run_time_file = "/workspaces/Project-2-Log-Monitor-Workflow/tmp/last_run_time.txt"
-monitor_log = "/workspaces/Project-2-Log-Monitor-Workflow/var/log/monitoring.log"
+log_file = "media/sf_Shared/failed_passwords.txt"
+last_run_time_file = "media/sf_Shared/last_run_time.txt"
+monitor_log = "media/sf_Shared/monitoring.log"
 
     #timezone variable
 eastern = pytz.timezone("America/New_York")
@@ -55,7 +56,7 @@ def send_email_alert(subject, message):
 
 def web_traffic(last_run_time=None):
 
-    # monitor web traffic and detect unusually high activity
+    # monitor web traffic and detect unusual activity
     new_last_run_time = datetime.now(eastern)
     relevant_lines = []
 
@@ -74,7 +75,7 @@ def web_traffic(last_run_time=None):
     # get timestamp from the log entry (adjusted to log format)
                 try:
                     log_timestamp = datetime.strptime(timestamp_str, "%b %d %H:%M:%S")
-                    log_timestamp = eastern.localize(log_timestamp.replace)
+                    log_timestamp = eastern.localize(log_timestamp.replace())
 
     # check if the log entry is new since the previous scan
                     if last_run_time is None or log_timestamp > last_run_time:
@@ -89,8 +90,11 @@ def web_traffic(last_run_time=None):
     requests = len(relevant_lines)
 
     # checks if the threshold has been exceeded, and outputs an alert to an email, if so
-    if requests > 0:
-        send_email_alert(f"ALERT: High traffic detected! {requests} new requests since last scan.")
+    if requests > 100:
+        send_email_alert(
+            subject="ALERT: High traffic detected!",
+            message=f"{requests} new requests since last scan."
+        )
 
     # last_run_time.txt file is updated with the current time
     save_last_run_time(new_last_run_time)
